@@ -1,6 +1,6 @@
 ## SY_Carry
 ꜰɪᴠᴇᴍ ᴄᴀʀʀʏ ꜱᴄʀɪᴘᴛ
-- ᴛᴏ ɢᴇᴛ ᴛʜᴇ ꜱᴄʀɪᴘᴛ - https://discord.gg/MAEcJQegt6
+- ᴛᴏ ɢᴇᴛ ᴛʜᴇ ꜱᴄʀɪᴘᴛ ꜰᴏʀ ꜰʀᴇᴇ - https://discord.gg/MAEcJQegt6
 - 
 ➣ ᴄᴏɴꜰɪɢᴜʀᴀʙʟᴇ
 
