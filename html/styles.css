@@ -5,30 +5,9 @@
   src: url('./fonts/BebasNeueBold.ttf');
 }
 @font-face {
-    font-family: 'Gilroy';
-    src: url("fonts/Gilroy-Light.otf")
-}
-@font-face {
-    font-family: "Gilroy-Bold";
-    src: url("fonts/Gilroy-ExtraBold.otf")
-}
-@font-face {
     font-family: 'Joyride-regular';
     src: url("fonts/Joyride-Regular.otf")
 }
-@font-face {
-    font-family: 'Joyride-round';
-    src: url("fonts/Joyride-Round.otf")
-}
-@font-face {
-    font-family: 'Joyride-Extended';
-    src: url(".//fonts/Joyride-Extended.otf")
-}
-@font-face {
-    font-family: 'DreamRoad';
-    src: url(".//fonts/Request.otf")
-}
-
 
 *{
 	user-select: none; /* supported by Chrome and Opera */
