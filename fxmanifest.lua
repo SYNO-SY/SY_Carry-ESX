@@ -1,13 +1,13 @@
-fx_version   'cerulean'
+fx_version  'cerulean'
 use_experimental_fxv2_oal 'yes'
-lua54        'yes'
-game 'gta5'
+lua54       'yes'
+game        'gta5'
 
-name   'SY_CARRY'
-author 'SYNO'
-version '1.3'
-license      ''
-repository   'https://github.com/'
+name        'SY_CARRY'
+author      'SYNO'
+version     '1.3'
+license     'GNU General Public License v3.0'
+repository  'https://github.com/SYNO-SY/SY_Carry'
 description 'A Carry Script With Request System for Fivem RP Server'
 
 
