@@ -29,11 +29,11 @@ shared_scripts {
 }
 
 server_scripts {
-	'server/main.lua'
+	'server/*.lua'
 }
 
 client_scripts {
-	'client/main.lua'
+	'client/*.lua'
 }
 
 
