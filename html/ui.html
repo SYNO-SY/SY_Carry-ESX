@@ -1,0 +1,54 @@
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">	
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>	
+	<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+
+<body>
+	<div class="full-screen">
+		<div class="carry-container" id="carryreceiever">
+			<div class="carrytextheader">Carry</div>
+			<div class="carrytextkey">Someone wants to carry you</div>
+			<div class="carrytextkey"><span style="color:#ff66bf">Y</span> for Accept</div>
+			<div class="carrytextkey"><span style="color:#ff66bf">N</span> for Decline </div>
+		</div>	
+		<div class="carry-container" id="carryrequester">
+			<div class="carrytextheader">Carry</div>
+			<div class="carrytextkey">Request was sent, expires in <span id="secondsremainingrequest" style="color:#ff66bf">120</span> seconds</div>
+		</div>
+		<div class="carry-container" id="carryed">
+			<div class="carrytextheader">Carry</div>
+			<div class="carrytextkey">Someone carries you</div>
+		</div>	
+		<div class="carrytype-container" id="carrytype">	
+			<div class="header">
+				<h1 class="CarryTypeMenuHeaderText">CARRY MENU</h1>
+				<div class="btnQuit"><img class="closetypemenu" src="img/close.png" alt="Quit" /></div>
+			</div>				
+			<div class="carrytype1"> 	
+				<img src="img/carrytype1.png" alt="Carry 1">
+				<div class="carrytextmain">CARRY</div>
+				<div class="carry1select">Select</div>	
+			</div>	
+			<div class="carrytype2"> 	
+				<img src="img/carrytype2.png" alt="Carry 2">
+				<div class="carrytextmain">ARM SITBACK</div>
+				<div class="carry2select">Select</div>	
+			</div>	
+			<div class="carrytype3"> 	
+				<img src="img/carrytype3.png" alt="Carry 3">
+				<div class="carrytextmain">PIGGYBACK</div>
+				<div class="carry3select">Select</div>	
+			</div>		
+		</div>					
+	</div>
+
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<script src="scripts.js" type="text/javascript"></script>
+	<script src="debounce.min.js" type="text/javascript"></script>
+
+</body>
