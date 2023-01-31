@@ -19,7 +19,7 @@ files {
 	'html/styles.css',
 	'html/scripts.js',
 	'html/debounce.min.js',
-	'html/fonts/BebasNeueBold.ttf',
+	'html/fonts/*.ttf',
 	'html/fonts/*.otf',
 	'html/img/*.png'
 }
