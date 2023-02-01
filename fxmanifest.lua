@@ -1,4 +1,4 @@
-fx_version  'cerulean'
+fx_version  'adamant'
 use_experimental_fxv2_oal 'yes'
 lua54       'yes'
 game        'gta5'
