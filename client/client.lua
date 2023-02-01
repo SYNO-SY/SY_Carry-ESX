@@ -41,7 +41,7 @@ AddEventHandler("SY_animations:reciverrequest", function(revicer,reqstcarryanim)
     PlaySound(-1, "NAV", "HUD_AMMO_SHOP_SOUNDSET", 0, 0, 1)
 	Notify(Config.requestmessage,'info')
     local waiting = 0 
-    CreateThreadNow(function()
+    CreateThread(function()
         while true do
             Wait(5)
             if isRequestAnim then
@@ -67,7 +67,7 @@ AddEventHandler("SY_animations:reciverrequest", function(revicer,reqstcarryanim)
             end
         end
     end)
-    CreateThreadNow(function()
+    CreateThread(function()
         while true do 
             Wait(100)
             waiting = waiting + 1
