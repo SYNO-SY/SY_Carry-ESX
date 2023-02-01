@@ -88,9 +88,6 @@ body{
     background-color: rgba(44, 157, 157, 0.411);
     border: 0.15em solid rgb(255, 255, 255);
     border-radius: 1em;
-    box-shadow: 0 0 1em 0.25em rgb(110,237,237), 
-    0 0 4em 1 em rgb(65, 243,243,0.781), 
-    inset 0 0 0.75em 0.25em rgb(110,237,237) ;
     outline: none;
 }
 
@@ -100,6 +97,9 @@ body{
 	border-color: #ffffff;
 	background: rgb(110,237,237);
 	text-decoration: none;
+	box-shadow: 0 0 1em 0.25em rgb(110,237,237), 
+    0 0 4em 1 em rgb(65, 243,243,0.781), 
+    inset 0 0 0.75em 0.25em rgb(110,237,237) ;
 }
 
 
@@ -156,9 +156,6 @@ body{
     background-color: rgba(44, 157, 157, 0.411);
     border: 0.15em solid rgb(255, 255, 255);
     border-radius: 1em;
-    box-shadow: 0 0 1em 0.25em rgb(110,237,237), 
-    0 0 4em 1 em rgb(65, 243,243,0.781), 
-    inset 0 0 0.75em 0.25em rgb(110,237,237) ;
     outline: none;
 }
 
@@ -168,6 +165,9 @@ body{
 	border-color: #ffffff;
 	background: rgb(110,237,237);
 	text-decoration: none;
+	    box-shadow: 0 0 1em 0.25em rgb(110,237,237), 
+    0 0 4em 1 em rgb(65, 243,243,0.781), 
+    inset 0 0 0.75em 0.25em rgb(110,237,237) ;
 }
 
 .carrytype3 {
@@ -223,9 +223,6 @@ body{
     background-color: rgba(44, 157, 157, 0.411);
     border: 0.15em solid rgb(255, 255, 255);
     border-radius: 1em;
-    box-shadow: 0 0 1em 0.25em rgb(110,237,237), 
-    0 0 4em 1em rgb(65, 243,243,0.781), 
-    inset 0 0 0.75em 0.25em rgb(110,237,237) ;
     outline: none;
 }
 
@@ -235,6 +232,9 @@ body{
 	border-color: #ffffff;
 	background: rgb(110,237,237);
 	text-decoration: none;
+	    box-shadow: 0 0 1em 0.25em rgb(110,237,237), 
+    0 0 4em 1 em rgb(65, 243,243,0.781), 
+    inset 0 0 0.75em 0.25em rgb(110,237,237) ;
 }
 
 .carrytextheader {
