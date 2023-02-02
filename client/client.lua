@@ -1,8 +1,16 @@
-ESX = exports["es_extended"]:getSharedObject()
 local PlayerData              = {}
 local carryingBackInProgress  = false
 local accepted = false
 local sycarry = true
+local ESX,QBCore = nil,nil
+
+CreateThread(function ()
+    if GetResourceState('es_extended') == 'started' then
+        ESX = exports['es_extended']:getSharedObject()
+    elseif GetResourceState('qb-core') == 'started' then
+        QBCore = exports['qb-core']:GetCoreObject()
+    end
+end)
 
 -----[REQUEST]-------
 RegisterNetEvent("SY_Carry:senderrequest")
@@ -11,9 +19,9 @@ AddEventHandler("SY_Carry:senderrequest", function(CarryTypeChoosed)
     while true do
 		Wait(1)
 		if reqstcarryanim ~= nil then
-			local closestPlayer, closestDistance = ESX.Game.GetClosestPlayer()
+			local closestPlayer, closestDistance = (ESX and ESX.Game.GetClosestPlayer()) or (QBCore and QBCore.Functions.GetClosestPlayer(coords))
 			if closestPlayer ~= -1 and closestDistance <= 2.5 then
-				ESX.ShowHelpNotification("~INPUT_PICKUP~ Suggest interactions \n~INPUT_VEH_DUCK~ Cancel")
+				ShowHelpNotification("~INPUT_PICKUP~ Suggest interactions \n~INPUT_VEH_DUCK~ Cancel")
 				target_id = GetPlayerPed(closestPlayer)
 				playerX, playerY, playerZ = table.unpack(GetEntityCoords(target_id))
 				DrawMarker(0, playerX, playerY, playerZ+1.0, 0.0, 0.0, 0.0, 0, 0.0, 0.0, 0.2, 0.2, 0.2, 155, 77, 219, 70, true, true, 2, true, false, false, false)
@@ -47,7 +55,7 @@ AddEventHandler("SY_animations:reciverrequest", function(revicer,reqstcarryanim)
             if isRequestAnim then
                 if IsControlJustPressed(1, Config.acceptkey) then
 					Notify("Request accepted",'success')
-                    target, distance = ESX.Game.GetClosestPlayer()
+                    target, distance = (ESX and ESX.Game.GetClosestPlayer()) or (QBCore and QBCore.Functions.GetClosestPlayer())
                     if(distance ~= -1 and distance < 3) then
                         TriggerServerEvent("SY_animations:animationaccepted", revicer,reqstcarryanim)
                         local accepted = true
@@ -57,7 +65,7 @@ AddEventHandler("SY_animations:reciverrequest", function(revicer,reqstcarryanim)
                     end
                 elseif IsControlJustPressed(1, Config.declinekey) then
 					Notify("Request denied.",'error')
-					local target = ESX.Game.GetClosestPlayer()
+					local target = (ESX and ESX.Game.GetClosestPlayer()) or (QBCore and QBCore.Functions.GetClosestPlayer())
 					sji = GetPlayerServerId(target)
 					TriggerServerEvent("SY_animations:animationdenied", sji)
                     isRequestAnim = false
@@ -268,4 +276,16 @@ function GetClosestPlayer(radius)
 	end
 end
 
+function ShowHelpNotification(msg, thisFrame, beep, duration)
+    AddTextEntry('HelpNotification', msg)
 
+    if thisFrame then
+        DisplayHelpTextThisFrame('HelpNotification', false)
+    else
+        if beep == nil then
+            beep = true
+        end
+        BeginTextCommandDisplayHelp('HelpNotification')
+        EndTextCommandDisplayHelp(0, false, beep, duration or -1)
+    end
+end
