@@ -1,4 +1,12 @@
-ESX = exports["es_extended"]:getSharedObject()
+local ESX,QBCore = nil,nil
+
+CreateThread(function ()
+    if GetResourceState('es_extended') == 'started' then
+        ESX = exports['es_extended']:getSharedObject()
+    elseif GetResourceState('qb-core') == 'started' then
+        QBCore = exports['qb-core']:GetCoreObject()
+    end
+end)
 
 RegisterServerEvent('SY_Carry_anim1:server:Sync')
 AddEventHandler('SY_Carry_anim1:server:Sync', function(target, animationLib,animationLib2, animation, animation2, distans, distans2, height,targetSrc,length,spin,controlFlagSrc,controlFlagTarget,animFlagTarget)
@@ -17,7 +25,7 @@ end)
 
 RegisterServerEvent('SY_Carry:onhandanim')
 AddEventHandler('SY_Carry:onhandanim', function(target)
-	local targetPlayer = ESX.GetPlayerFromId(target)
+	local targetPlayer = (ESX and ESX.GetPlayerFromId(target)) or (QBCore and QBCore.Functions.GetPlayerByCitizenId(target))
 	TriggerClientEvent('SY_Carry:onhandanimcarry', targetPlayer.source, source)
 end)
 
@@ -41,9 +49,7 @@ end)
 
 RegisterServerEvent("SY_animations:animationdenied") 
 AddEventHandler("SY_animations:animationdenied", function(source)
-	local xPlayer = ESX.GetPlayerFromId(source)
 	Notify("Your Request Has Been Denied",'error',true,source)
-	--xPlayer.showNotification("Your Request Has Been Denied")
 end)
 
 
