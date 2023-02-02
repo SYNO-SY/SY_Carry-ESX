@@ -1,7 +1,8 @@
 ## SY_Carry
 ꜰɪᴠᴇᴍ ᴄᴀʀʀʏ ꜱᴄʀɪᴘᴛ
 - Discord - https://discord.gg/MAEcJQegt6
-➣ ꜱᴜᴘᴘᴏʀᴛ (ᴇꜱx)[https://github.com/esx-framework/esx_core/tree/main/%5Bcore%5D/es_extended] ᴀɴᴅ (Qʙᴄᴏʀᴇ)[https://github.com/qbcore-framework/qb-core]
+
+➣ ꜱᴜᴘᴘᴏʀᴛ [ᴇꜱx](https://github.com/esx-framework/esx_core/tree/main/%5Bcore%5D/es_extended] ᴀɴᴅ [Qʙᴄᴏʀᴇ](https://github.com/qbcore-framework/qb-core)
 
 ➣ ᴄᴏɴꜰɪɢᴜʀᴀʙʟᴇ
 
