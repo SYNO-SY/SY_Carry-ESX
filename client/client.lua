@@ -19,10 +19,11 @@ AddEventHandler("SY_Carry:senderrequest", function(CarryTypeChoosed)
     while true do
 		Wait(1)
 		if reqstcarryanim ~= nil then
+			local coords = GetEntityCoords(PlayerPedId())
 			if ESX ~= nil then
 			   closestPlayer, closestDistance = ESX.Game.GetClosestPlayer()
 			else
-			   closestPlayer, closestDistance = QBCore.Functions.GetClosestPlayer()
+			   closestPlayer, closestDistance = QBCore.Functions.GetClosestPlayer(coords)
 			end
 			if closestPlayer ~= -1 and closestDistance <= 2.5 then
 				ShowHelpNotification("~INPUT_PICKUP~ Suggest interactions \n~INPUT_VEH_DUCK~ Cancel")
@@ -58,11 +59,12 @@ AddEventHandler("SY_animations:reciverrequest", function(revicer,reqstcarryanim)
             Wait(5)
             if isRequestAnim then
                 if IsControlJustPressed(1, Config.acceptkey) then
-					Notify("Request accepted",'success')
+			Notify("Request accepted",'success')
+			local coords = GetEntityCoords(PlayerPedId())
                    	if ESX ~= nil then
 			distance = ESX.Game.GetClosestPlayer()
 			else
-			   distance = QBCore.Functions.GetClosestPlayer()
+			   distance = QBCore.Functions.GetClosestPlayer(coords)
 			end
                     if(distance ~= -1 and distance < 3) then
                         TriggerServerEvent("SY_animations:animationaccepted", revicer,reqstcarryanim)
@@ -72,11 +74,12 @@ AddEventHandler("SY_animations:reciverrequest", function(revicer,reqstcarryanim)
 						Notify("Nobody is close enough.",'info')
                     end
                 elseif IsControlJustPressed(1, Config.declinekey) then
-					Notify("Request denied.",'error')
-					if ESX ~= nil then
-			target = ESX.Game.GetClosestPlayer()
+			Notify("Request denied.",'error')
+                        local coords = GetEntityCoords(PlayerPedId())
+			if ESX ~= nil then
+			   target = ESX.Game.GetClosestPlayer()
 			else
-			   target = QBCore.Functions.GetClosestPlayer()
+			   target = QBCore.Functions.GetClosestPlayer(coords)
 			end
 					sji = GetPlayerServerId(target)
 					TriggerServerEvent("SY_animations:animationdenied", sji)
