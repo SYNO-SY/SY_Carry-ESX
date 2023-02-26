@@ -12,32 +12,7 @@ $(".closetypemenu").click(function(){
 
 window.addEventListener('message', function (event) {
 
-	var item = event.data;
-	
-	if (item.message == "showcarryrequestreceiever") {
-		$('#carryrequester').hide();
-		$('#carryed').hide();
-		$('#carrytype').hide();
-		$('#carryreceiever').show();
-		openMain();
-	}	
-	
-	if (item.message == "showcarryrequestrequester") {
-		$('#carryreceiever').hide();
-		$('#carryed').hide();
-		$('#carrytype').hide();
-		$('#carryrequester').show();
-		document.getElementById("secondsremainingrequest").innerHTML = item.remainingseconds;
-		openMain();
-	}		
-	
-	if (item.message == "showcarryed") {
-		$('#carryreceiever').hide();
-		$('#carryrequester').hide();
-		$('#carrytype').hide();
-		$('#carryed').show();
-		openMain();
-	}	
+	var item = event.data;	
 
 	if (item.message == "showtypes") {
 		$('#carryreceiever').hide();
