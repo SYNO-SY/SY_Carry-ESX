@@ -273,7 +273,7 @@ function GetClosestPlayer(radius)
 	local closestPlayer = -1
 	local ply = PlayerPedId()
 	local plyCoords = GetEntityCoords(ply, 0)
-	for index,value in ipairs(players) do
+	for index,value inpairs(players) do
 		local target = GetPlayerPed(value)
 		if(target ~= ply) then
 			local targetCoords = GetEntityCoords(GetPlayerPed(value), 0)
