@@ -16,7 +16,6 @@ files {
 	'ui/ui.html',
 	'ui/styles.css',
 	'ui/scripts.js',
-	'ui/debounce.min.js',
 	'ui/fonts/*.ttf',
 	'ui/fonts/*.otf',
 	'ui/img/*.png'
