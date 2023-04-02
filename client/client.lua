@@ -109,7 +109,7 @@ end)
 RegisterNetEvent("SY_animations:playsharedsource")
 AddEventHandler("SY_animations:playsharedsource", function(reqstcarryanim,player)
 	akmon = reqstcarryanim
-	if akmon == "type1" then 
+	if akmon == "carry1" then 
 		carryingBackInProgress = true
 		local closestPlayer = GetClosestPlayer(3)
 		target = player
@@ -117,7 +117,7 @@ AddEventHandler("SY_animations:playsharedsource", function(reqstcarryanim,player
 			TriggerServerEvent('SY_Carry_anim1:server:Sync', closestPlayer, 'missfinale_c2mcs_1','nm', 'fin_c2_mcs_1_camman', 'firemans_carry', 0.15,0.27,0.63,target,100000,0.0,49,33,1)
 			isCarry = true
 		end
-	elseif akmon == "type2" then
+	elseif akmon == "carry2" then
 		carryingBackInProgress = true
         Citizen.Wait(100)
         local dict = "anim@heists@box_carry@"	
@@ -128,7 +128,7 @@ AddEventHandler("SY_animations:playsharedsource", function(reqstcarryanim,player
 		targetplayer = player
         TriggerServerEvent('SY_Carry:onhandanim', targetplayer)		
         TaskPlayAnim(PlayerPedId(), dict, "idle", 8.0, 8.0, -1, 50, 0, false, false, false)
-    elseif akmon == "type3" then
+    elseif akmon == "carry3" then
         carryingBackInProgress = true	
 		local closestPlayer = GetClosestPlayer(3)
 		target = player
