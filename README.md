@@ -1,6 +1,7 @@
 ## SY_Carry
 ꜰɪᴠᴇᴍ ᴄᴀʀʀʏ ꜱᴄʀɪᴘᴛ
 - Discord - https://discord.gg/MAEcJQegt6
+- Inspired by RTX-CARRY
 
 ➣ ꜱᴜᴘᴘᴏʀᴛ [ᴇꜱx](https://github.com/esx-framework/esx_core/tree/main/%5Bcore%5D/es_extended) ᴀɴᴅ [Qʙᴄᴏʀᴇ](https://github.com/qbcore-framework/qb-core)
 
