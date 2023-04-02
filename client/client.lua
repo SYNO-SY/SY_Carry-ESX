@@ -160,25 +160,25 @@ RegisterCommand(Config.command, function(source, args)
     end
 end)
 
-RegisterNUICallback("closetypeselect", function(a, b)
+RegisterNUICallback("close", function()
     SetNuiFocus(false, false)
     SendNUIMessage({message = "hide"})
 end)
 
-RegisterNUICallback("selecttype", function(a, b)
-    CarryTypeChoosed = tostring(a.carrytype)
+RegisterNUICallback("selectedtype", function(data)
+    CarryTypeChoosed = data
     SetNuiFocus(false, false)
-	if CarryTypeChoosed == "type1" then
+	if CarryTypeChoosed == "carry1" then
 		if not carryingBackInProgress then
-			TriggerEvent("SY_Carry:senderrequest",CarryTypeChoosed)
+			TriggerEvent("SY_Carry:senderrequest",CarryTypeChoosed)       
 		end
 	end
-	if CarryTypeChoosed == "type2" then
+	if CarryTypeChoosed == "carry2" then
 		if not carryingBackInProgress then
-			TriggerEvent("SY_Carry:senderrequest",CarryTypeChoosed)
+			TriggerEvent("SY_Carry:senderrequest",CarryTypeChoosed)	
 		end
 	end
-	if CarryTypeChoosed == "type3" then
+	if CarryTypeChoosed == "carry3" then
 		if not carryingBackInProgress then
 			TriggerEvent("SY_Carry:senderrequest",CarryTypeChoosed)
 		end
