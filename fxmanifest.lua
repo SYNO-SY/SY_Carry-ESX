@@ -10,16 +10,16 @@ license     'GNU General Public License v3.0'
 repository  'https://github.com/SYNO-SY/SY_Carry'
 description 'A Carry Script With Request System for Fivem RP Server'
 
-ui_page 'html/ui.html'
+ui_page 'ui/ui.html'
 
 files {
-	'html/ui.html',
-	'html/styles.css',
-	'html/scripts.js',
-	'html/debounce.min.js',
-	'html/fonts/*.ttf',
-	'html/fonts/*.otf',
-	'html/img/*.png'
+	'ui/ui.html',
+	'ui/styles.css',
+	'ui/scripts.js',
+	'ui/debounce.min.js',
+	'ui/fonts/*.ttf',
+	'ui/fonts/*.otf',
+	'ui/img/*.png'
 }
 
 shared_scripts {
