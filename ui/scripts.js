@@ -20,7 +20,7 @@ function OpenMenu() {
 	$("body").css({"display":"block" ,"background-color": "rgba(255, 255, 255, 0)"});
 }
 
-$(".closemenu").click(function(){
+$(".quit").click(function(){
 	sendNUI('close');
 });
 
@@ -31,17 +31,17 @@ document.addEventListener("keydown", (event) => {
     }
 });
 
-$(".carry-btn").click(function () {
+$("#carry-btn").click(function () {
 	CloseMenu();
 	sendNUI('selectedtype','carry1');
 });
 
-$(".armsitback-btn").click(function () {
+$("#armsitback-btn").click(function () {
 	CloseMenu();
 	sendNUI('selectedtype','carry2');
 });
 
-$(".piggyback-btn").click(function () {
+$("#piggyback-btn").click(function () {
 	CloseMenu();
 	sendNUI('selectedtype','carry3');
 });
