@@ -3,11 +3,14 @@ local carryingBackInProgress  = false
 local accepted = false
 local sycarry = true
 local ESX,QBCore = nil,nil
+local ESX,QBCore = false,false
 
 CreateThread(function ()
     if GetResourceState('es_extended') == 'started' then
+        ESX = true
         ESX = exports['es_extended']:getSharedObject()
     elseif GetResourceState('qb-core') == 'started' then
+        QBCore = true
         QBCore = exports['qb-core']:GetCoreObject()
     end
 end)
@@ -20,7 +23,7 @@ AddEventHandler("SY_Carry:senderrequest", function(CarryTypeChoosed)
 		Wait(1)
 		if reqstcarryanim ~= nil then
 			local coords = GetEntityCoords(PlayerPedId())
-			if ESX ~= nil then
+			if ESX ~= false then
 			   closestPlayer, closestDistance = ESX.Game.GetClosestPlayer()
 			else
 			   closestPlayer, closestDistance = QBCore.Functions.GetClosestPlayer(coords)
@@ -61,7 +64,7 @@ AddEventHandler("SY_animations:reciverrequest", function(revicer,reqstcarryanim)
                 if IsControlJustPressed(1, Config.acceptkey) then
 			Notify("Request accepted",'success')
 			local coords = GetEntityCoords(PlayerPedId())
-                   	if ESX ~= nil then
+                   	if ESX ~= false then
 			distance = ESX.Game.GetClosestPlayer()
 			else
 			   distance = QBCore.Functions.GetClosestPlayer(coords)
@@ -76,7 +79,7 @@ AddEventHandler("SY_animations:reciverrequest", function(revicer,reqstcarryanim)
                 elseif IsControlJustPressed(1, Config.declinekey) then
 			Notify("Request denied.",'error')
                         local coords = GetEntityCoords(PlayerPedId())
-			if ESX ~= nil then
+			if ESX ~= false then
 			   target = ESX.Game.GetClosestPlayer()
 			else
 			   target = QBCore.Functions.GetClosestPlayer(coords)
