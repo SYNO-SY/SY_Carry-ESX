@@ -20,6 +20,7 @@
 
 ➣ ʀᴇQᴜᴇꜱᴛ ꜱʏꜱᴛᴇᴍ
 
-![carry](https://user-images.githubusercontent.com/89760730/194761159-e138344a-fa01-47f6-a3d5-a10c64136179.PNG)
+![carry](https://user-images.githubusercontent.com/89760730/232153798-4b6e8303-edb8-4cca-9769-73830ef7c8bd.png)
+
 
 
