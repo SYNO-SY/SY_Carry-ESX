@@ -16,8 +16,6 @@ files {
 	'ui/ui.html',
 	'ui/styles.css',
 	'ui/scripts.js',
-	'ui/fonts/*.ttf',
-	'ui/fonts/*.otf',
 	'ui/img/*.png'
 }
 
